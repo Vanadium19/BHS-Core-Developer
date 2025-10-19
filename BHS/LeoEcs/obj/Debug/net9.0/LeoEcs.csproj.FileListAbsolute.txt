@@ -1,0 +1,12 @@
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/bin/Debug/net9.0/LeoEcs.deps.json
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/bin/Debug/net9.0/LeoEcs.dll
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/bin/Debug/net9.0/LeoEcs.pdb
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/LeoEcs.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/LeoEcs.AssemblyInfoInputs.cache
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/LeoEcs.AssemblyInfo.cs
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/LeoEcs.csproj.CoreCompileInputs.cache
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/LeoEcs.sourcelink.json
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/LeoEcs.dll
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/refint/LeoEcs.dll
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/LeoEcs.pdb
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/ref/LeoEcs.dll
