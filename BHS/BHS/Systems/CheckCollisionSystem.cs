@@ -16,19 +16,17 @@ public struct CheckCollisionSystem : IEcsInitSystem, IEcsRunSystem
 
     private EcsPool<PositionComponent> _positions;
     private EcsPool<RadiusComponent> _radii;
-    private EcsPool<DirectionComponent> _directions;
 
     public void Init(IEcsSystems systems)
     {
         var world = systems.GetWorld();
 
-        _balls = world.Filter<PositionComponent>().Inc<RadiusComponent>().Inc<DirectionComponent>().End();
+        _balls = world.Filter<PositionComponent>().Inc<RadiusComponent>().End();
         _walls = world.Filter<EdgeComponent>().End();
 
         _positions = world.GetPool<PositionComponent>();
         _radii = world.GetPool<RadiusComponent>();
-        _directions = world.GetPool<DirectionComponent>();
-        
+
         _edges = world.GetPool<EdgeComponent>();
         _collisions = world.GetPool<CollisionEvent>();
     }
@@ -49,20 +47,11 @@ public struct CheckCollisionSystem : IEcsInitSystem, IEcsRunSystem
                 if (distance > radius.Value)
                     continue;
 
-                var normal = GetNormal(edge);
+                var normal = edge.GetNormal();
                 _collisions.Add(ball).Normal = normal;
-                // ref var direction = ref _directions.Get(ball);
-                // direction.Value -= 2 * Vector2.Dot(direction.Value, normal) * normal;
                 break;
             }
         }
-    }
-
-    private Vector2 GetNormal(EdgeComponent edge)
-    {
-        var edgeVector = edge.End - edge.Start;
-        edgeVector = Vector2.Normalize(edgeVector);
-        return new Vector2(-edgeVector.Y, edgeVector.X);
     }
 
     private float CalculateDistance(Vector2 point, EdgeComponent edge)

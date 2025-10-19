@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Avalonia.Threading;
-using BHS.Factories;
+using BHS.View.SceneObjects;
 
 namespace BHS.View;
 

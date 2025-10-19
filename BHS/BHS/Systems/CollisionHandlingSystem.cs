@@ -7,6 +7,8 @@ namespace BHS.Systems;
 
 public struct CollisionHandlingSystem : IEcsInitSystem, IEcsRunSystem
 {
+    private const int ReflectionFactor = 2;
+
     private EcsFilter _filter;
 
     private EcsPool<DirectionComponent> _directions;
@@ -29,7 +31,7 @@ public struct CollisionHandlingSystem : IEcsInitSystem, IEcsRunSystem
             ref var collisionEvent = ref _collisions.Get(entity);
             ref var direction = ref _directions.Get(entity);
 
-            direction.Value -= 2 * Vector2.Dot(direction.Value, collisionEvent.Normal) * collisionEvent.Normal;
+            direction.Value -= ReflectionFactor * Vector2.Dot(direction.Value, collisionEvent.Normal) * collisionEvent.Normal;
             _collisions.Del(entity);
         }
     }

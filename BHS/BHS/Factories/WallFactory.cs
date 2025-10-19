@@ -1,13 +1,15 @@
 using System.Numerics;
 using BHS.Components;
-using BHS.Core;
 using BHS.View;
+using BHS.View.SceneObjects;
 using Leopotam.EcsLite;
 
 namespace BHS.Factories;
 
 public class WallFactory
 {
+    private const float CenterLerp = 0.5f;
+
     private readonly ISceneService _scene;
     private readonly EcsWorld _world;
 
@@ -27,12 +29,12 @@ public class WallFactory
         edge.Start = start;
         edge.End = end;
 
-        var center = Vector2.Lerp(start, end, 0.5f);
-        var wall = new Wall(entity, center, start, end);
-        _scene.Add(wall);
+        var center = Vector2.Lerp(start, end, CenterLerp);
+        var wall = new Wall(center, start, end);
 
         var links = _world.GetPool<LinkToSceneObject>();
         links.Add(entity).Value = wall;
+        _scene.Add(wall);
 
         return wall;
     }

@@ -1,3 +1,5 @@
+using BHS.View.SceneObjects;
+
 namespace BHS.View;
 
 public interface ISceneService

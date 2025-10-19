@@ -1,17 +1,15 @@
 using System.Numerics;
 using Avalonia.Controls.Shapes;
 
-namespace BHS.View;
+namespace BHS.View.SceneObjects;
 
 public abstract class SceneObject
 {
-    protected SceneObject(int id, Vector2 position)
+    protected SceneObject(Vector2 position)
     {
-        Id = id;
         Position = position;
     }
 
-    public int Id { get; }
     public abstract Shape Shape { get; }
     public Vector2 Position { get; private set; }
 

@@ -1,6 +1,7 @@
 using BHS.Components;
 using BHS.Data;
 using BHS.View;
+using BHS.View.SceneObjects;
 using Leopotam.EcsLite;
 
 namespace BHS.Factories;
@@ -32,7 +33,7 @@ public class BallFactory
         var radius = _world.GetPool<RadiusComponent>();
         radius.Add(entity).Value = data.Radius;
 
-        var ball = new Ball(entity, position);
+        var ball = new Ball(position);
 
         var links = _world.GetPool<LinkToSceneObject>();
         links.Add(entity).Value = ball;

@@ -1,5 +1,3 @@
-using System.Numerics;
-using BHS.Data;
 using BHS.Systems;
 using Leopotam.EcsLite;
 
