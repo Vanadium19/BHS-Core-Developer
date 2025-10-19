@@ -1,6 +1,7 @@
 using System.Numerics;
 using Avalonia;
 using Avalonia.Controls.Shapes;
+using Avalonia.Media;
 
 namespace BHS.View.SceneObjects;
 
@@ -14,10 +15,15 @@ public sealed class Wall : SceneObject
         {
             StartPoint = new Point(start.X, start.Y),
             EndPoint = new Point(end.X, end.Y),
-            Stroke = Avalonia.Media.Brushes.Gray,
+            Stroke = Brushes.Gray,
             StrokeThickness = Thickness,
         };
     }
 
     public override Shape Shape { get; }
+
+    protected override void UpdateColorInternal(IImmutableSolidColorBrush value)
+    {
+        Shape.Stroke = value;
+    }
 }

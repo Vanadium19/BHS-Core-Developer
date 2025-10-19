@@ -27,4 +27,9 @@ public sealed class Ball : SceneObject
         Canvas.SetLeft(Shape, Position.X - ObjectsData.Ball.Radius);
         Canvas.SetTop(Shape, Position.Y - ObjectsData.Ball.Radius);
     }
+
+    protected override void UpdateColorInternal(IImmutableSolidColorBrush value)
+    {
+        Shape.Fill = value;
+    }
 }

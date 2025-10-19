@@ -1,4 +1,5 @@
 using System.Numerics;
+using Avalonia.Media;
 
 namespace BHS.Data;
 
@@ -11,6 +12,13 @@ public static class ObjectsData
         (new Vector2(700, 100), new Vector2(100, 100)),
         (new Vector2(100, 100), new Vector2(100, 500))
     ];
+
+    public static readonly WallAnimationData WallAnimationData = new()
+    {
+        StartColor = Brushes.Gray,
+        TargetColor = Brushes.Red,
+        Time = 0.5f,
+    };
 
     public static readonly BallData Ball = new()
     {

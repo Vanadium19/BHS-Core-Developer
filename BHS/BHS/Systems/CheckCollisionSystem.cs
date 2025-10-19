@@ -13,6 +13,7 @@ public struct CheckCollisionSystem : IEcsInitSystem, IEcsRunSystem
 
     private EcsPool<EdgeComponent> _edges;
     private EcsPool<CollisionEvent> _collisions;
+    private EcsPool<ColorChangeEvent> _colorEvents;
 
     private EcsPool<PositionComponent> _positions;
     private EcsPool<RadiusComponent> _radii;
@@ -29,6 +30,7 @@ public struct CheckCollisionSystem : IEcsInitSystem, IEcsRunSystem
 
         _edges = world.GetPool<EdgeComponent>();
         _collisions = world.GetPool<CollisionEvent>();
+        _colorEvents = world.GetPool<ColorChangeEvent>();
     }
 
     public void Run(IEcsSystems systems)
@@ -49,6 +51,7 @@ public struct CheckCollisionSystem : IEcsInitSystem, IEcsRunSystem
 
                 var normal = edge.GetNormal();
                 _collisions.Add(ball).Normal = normal;
+                _colorEvents.Add(wall);
                 break;
             }
         }

@@ -1,5 +1,6 @@
 using System.Numerics;
 using BHS.Components;
+using BHS.Data;
 using BHS.View;
 using BHS.View.SceneObjects;
 using Leopotam.EcsLite;
@@ -21,13 +22,18 @@ public class WallFactory
 
     public Wall Create(Vector2 start, Vector2 end)
     {
-        var edges = _world.GetPool<EdgeComponent>();
-
         var entity = _world.NewEntity();
 
+        var edges = _world.GetPool<EdgeComponent>();
         ref var edge = ref edges.Add(entity);
         edge.Start = start;
         edge.End = end;
+
+        var animations = _world.GetPool<ColorAnimationComponent>();
+        ref var animation = ref animations.Add(entity);
+        animation.StartColor = ObjectsData.WallAnimationData.StartColor;
+        animation.TargetColor = ObjectsData.WallAnimationData.TargetColor;
+        animation.Time = ObjectsData.WallAnimationData.Time;
 
         var center = Vector2.Lerp(start, end, CenterLerp);
         var wall = new Wall(center, start, end);

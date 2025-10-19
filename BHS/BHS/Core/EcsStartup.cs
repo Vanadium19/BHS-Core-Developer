@@ -21,6 +21,8 @@ public class EcsStartup : IEcsService
         _systems.Add(new MoveSystem())
             .Add(new CheckCollisionSystem())
             .Add(new CollisionHandlingSystem())
+            .Add(new ColorChangeEventHandlingSystem())
+            .Add(new ColorChangeAnimationSystem())
             .Add(new PositionSyncSystem())
             .Init();
     }
