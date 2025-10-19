@@ -1,0 +1,10 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="BHS.MainWindow"
+        Width="800" Height="600"
+        Background="Black"
+        Title="Ball Demo">
+
+    <Canvas x:Name="CanvasRoot" Background="Black">
+    </Canvas>
+</Window>
