@@ -2,7 +2,7 @@ using System.Numerics;
 
 namespace BHS.Components;
 
-public struct VelocityComponent
+public struct DirectionComponent
 {
     public Vector2 Value;
 }

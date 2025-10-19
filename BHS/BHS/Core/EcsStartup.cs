@@ -21,7 +21,8 @@ public class EcsStartup : IEcsService
         _systems = new EcsSystems(_world);
 
         _systems.Add(new MoveSystem())
-            .Add(new HitSystem())
+            .Add(new CheckCollisionSystem())
+            .Add(new CollisionHandlingSystem())
             .Add(new PositionSyncSystem())
             .Init();
     }

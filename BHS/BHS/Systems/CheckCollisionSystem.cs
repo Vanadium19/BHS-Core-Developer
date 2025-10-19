@@ -1,33 +1,36 @@
 using System;
 using System.Numerics;
 using BHS.Components;
+using BHS.Events;
 using Leopotam.EcsLite;
 
 namespace BHS.Systems;
 
-public struct HitSystem : IEcsInitSystem, IEcsRunSystem
+public struct CheckCollisionSystem : IEcsInitSystem, IEcsRunSystem
 {
     private EcsFilter _balls;
     private EcsFilter _walls;
 
     private EcsPool<EdgeComponent> _edges;
+    private EcsPool<CollisionEvent> _collisions;
 
     private EcsPool<PositionComponent> _positions;
     private EcsPool<RadiusComponent> _radii;
-    private EcsPool<VelocityComponent> _velocities;
+    private EcsPool<DirectionComponent> _directions;
 
     public void Init(IEcsSystems systems)
     {
         var world = systems.GetWorld();
 
-        _balls = world.Filter<PositionComponent>().Inc<RadiusComponent>().Inc<VelocityComponent>().End();
+        _balls = world.Filter<PositionComponent>().Inc<RadiusComponent>().Inc<DirectionComponent>().End();
         _walls = world.Filter<EdgeComponent>().End();
 
         _positions = world.GetPool<PositionComponent>();
         _radii = world.GetPool<RadiusComponent>();
-        _velocities = world.GetPool<VelocityComponent>();
-
+        _directions = world.GetPool<DirectionComponent>();
+        
         _edges = world.GetPool<EdgeComponent>();
+        _collisions = world.GetPool<CollisionEvent>();
     }
 
     public void Run(IEcsSystems systems)
@@ -47,9 +50,9 @@ public struct HitSystem : IEcsInitSystem, IEcsRunSystem
                     continue;
 
                 var normal = GetNormal(edge);
-
-                ref var velocity = ref _velocities.Get(ball);
-                velocity.Value -= 2 * Vector2.Dot(velocity.Value, normal) * normal;
+                _collisions.Add(ball).Normal = normal;
+                // ref var direction = ref _directions.Get(ball);
+                // direction.Value -= 2 * Vector2.Dot(direction.Value, normal) * normal;
                 break;
             }
         }

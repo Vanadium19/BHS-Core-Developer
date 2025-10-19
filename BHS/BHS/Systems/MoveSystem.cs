@@ -1,4 +1,3 @@
-using System;
 using BHS.Components;
 using Leopotam.EcsLite;
 using static BHS.Constants.GameConstants;
@@ -11,16 +10,16 @@ public struct MoveSystem : IEcsInitSystem, IEcsRunSystem
 
     private EcsPool<PositionComponent> _positions;
     private EcsPool<SpeedComponent> _speeds;
-    private EcsPool<VelocityComponent> _velocities;
+    private EcsPool<DirectionComponent> _directions;
 
     public void Init(IEcsSystems systems)
     {
         var world = systems.GetWorld();
 
-        _filter = world.Filter<PositionComponent>().Inc<SpeedComponent>().Inc<VelocityComponent>().End();
+        _filter = world.Filter<PositionComponent>().Inc<SpeedComponent>().Inc<DirectionComponent>().End();
         _positions = world.GetPool<PositionComponent>();
         _speeds = world.GetPool<SpeedComponent>();
-        _velocities = world.GetPool<VelocityComponent>();
+        _directions = world.GetPool<DirectionComponent>();
     }
 
     public void Run(IEcsSystems systems)
@@ -29,9 +28,9 @@ public struct MoveSystem : IEcsInitSystem, IEcsRunSystem
         {
             ref var positon = ref _positions.Get(entity);
             ref var speed = ref _speeds.Get(entity);
-            ref var velocity = ref _velocities.Get(entity);
+            ref var direction = ref _directions.Get(entity);
 
-            positon.Value += velocity.Value * speed.Value * DeltaTime;
+            positon.Value += direction.Value * speed.Value * DeltaTime;
         }
     }
 }

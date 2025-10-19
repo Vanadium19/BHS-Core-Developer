@@ -26,8 +26,8 @@ public class BallFactory
         var speeds = _world.GetPool<SpeedComponent>();
         speeds.Add(entity).Value = data.Speed;
 
-        var velocities = _world.GetPool<VelocityComponent>();
-        velocities.Add(entity).Value = data.Velocity;
+        var directions = _world.GetPool<DirectionComponent>();
+        directions.Add(entity).Value = data.Direction;
 
         var radius = _world.GetPool<RadiusComponent>();
         radius.Add(entity).Value = data.Radius;

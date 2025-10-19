@@ -16,7 +16,7 @@ public static class ObjectsData
     {
         Radius = 20,
         Speed = 25,
-        Velocity = new Vector2(1, 0.2f),
+        Direction = new Vector2(1, 0.2f),
         Position = new Vector2(400, 300),
     };
 }
