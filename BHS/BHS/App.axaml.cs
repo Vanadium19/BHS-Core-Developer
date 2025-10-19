@@ -6,12 +6,17 @@ using Avalonia.Markup.Xaml;
 using BHS.Constants;
 using BHS.Core;
 using BHS.View;
-using Leopotam.EcsLite;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BHS;
 
 public partial class App : Application
 {
+    private readonly CancellationTokenSource _tokenSource = new();
+
+    private IEcsService _ecsService;
+    private ISceneService _sceneService;
+
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -19,36 +24,46 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
-        var scene = new Scene();
-        var ecsStartup = new EcsStartup(scene);
+        var services = new ServiceCollection();
+        var startup = new AppStartup();
 
-        var systems = ecsStartup.Create();
-        var tokenSource = new CancellationTokenSource();
+        startup.ConfigureServices(services);
+
+        var provider = services.BuildServiceProvider();
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            var window = new MainWindow(scene.Objects);
-            desktop.MainWindow = window;
-
-            GameLoop(systems, window, tokenSource);
-
-            desktop.Exit += (_, _) =>
-            {
-                tokenSource.Cancel();
-                ecsStartup.Dispose();
-            };
+            desktop.MainWindow = provider.GetService<MainWindow>();
+            desktop.Exit += (_, _) => Dispose();
         }
+
+        _ecsService = provider.GetService<IEcsService>()!;
+        _sceneService = provider.GetService<ISceneService>()!;
+
+        _ecsService.Initialize();
+
+        var sceneStartup = provider.GetService<SceneStartup>();
+        sceneStartup!.Initialize();
+
+        GameLoop();
 
         base.OnFrameworkInitializationCompleted();
     }
 
-    private async void GameLoop(EcsSystems systems, MainWindow mainWindow, CancellationTokenSource tokenSource)
+    private async void GameLoop()
     {
         while (true)
         {
-            systems.Run();
-            mainWindow.Render();
-            await Task.Delay(GameConstants.SleepTime, tokenSource.Token);
+            _ecsService.Run();
+            _sceneService.Render();
+
+            await Task.Delay(GameConstants.SleepTime, _tokenSource.Token);
         }
+    }
+
+    private void Dispose()
+    {
+        _ecsService!.Dispose();
+        _sceneService!.Dispose();
     }
 }

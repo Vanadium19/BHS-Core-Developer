@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LeoEcs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48741089dc7ebf161023ec507d8b7e0df4636930")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f5a57fe9acf2291f5845abb84defba80d25c596")]
 [assembly: System.Reflection.AssemblyProductAttribute("LeoEcs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LeoEcs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

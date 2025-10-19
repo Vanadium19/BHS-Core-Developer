@@ -49,8 +49,7 @@ public struct HitSystem : IEcsInitSystem, IEcsRunSystem
                 var normal = GetNormal(edge);
 
                 ref var velocity = ref _velocities.Get(ball);
-                // velocity.Value -= 2 * Vector2.Dot(velocity.Value, normal) * normal;
-                velocity.Value = Vector2.Zero;
+                velocity.Value -= 2 * Vector2.Dot(velocity.Value, normal) * normal;
                 break;
             }
         }

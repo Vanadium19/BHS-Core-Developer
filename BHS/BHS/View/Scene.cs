@@ -1,15 +1,19 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using BHS.Core;
+using Avalonia.Threading;
+using BHS.Factories;
 
 namespace BHS.View;
 
-public class Scene
+public class Scene : ISceneService
 {
     private readonly List<SceneObject> _objects = new();
+    private readonly MainWindow _window;
 
-    public IEnumerable<SceneObject> Objects => _objects;
+    public Scene(MainWindow window)
+    {
+        _window = window;
+    }
 
     public void Add(SceneObject sceneObject)
     {
@@ -17,10 +21,18 @@ public class Scene
             throw new ArgumentException("Scene already contains this object.");
 
         _objects.Add(sceneObject);
+        _window.Controls.Add(sceneObject.Shape);
     }
 
-    public T GetFirst<T>() where T : SceneObject
+    public void Render()
     {
-        return _objects.FirstOrDefault(sceneObject => sceneObject is T) as T ?? throw new Exception("Object not found.");
+        foreach (var sceneObject in _objects)
+            Dispatcher.UIThread.Post(() => sceneObject.Render());
+    }
+
+    public void Dispose()
+    {
+        foreach (var sceneObject in _objects)
+            _window.Controls.Remove(sceneObject.Shape);
     }
 }

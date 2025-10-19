@@ -26,6 +26,8 @@
 /Users/vanadium/Repos/BHS-Core-Developer/BHS/LeoEcs/obj/Debug/net9.0/ref/LeoEcs.dll
 /Users/vanadium/.nuget/packages/microcom.runtime/0.11.0/lib/net5.0/MicroCom.Runtime.dll
 /Users/vanadium/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.9/ref/net9.0/Microsoft.CSharp.dll
+/Users/vanadium/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.0-rc.2.25502.107/lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/vanadium/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.0-rc.2.25502.107/lib/net9.0/Microsoft.Extensions.DependencyInjection.dll
 /Users/vanadium/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.9/ref/net9.0/Microsoft.VisualBasic.Core.dll
 /Users/vanadium/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.9/ref/net9.0/Microsoft.VisualBasic.dll
 /Users/vanadium/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.9/ref/net9.0/Microsoft.Win32.Primitives.dll

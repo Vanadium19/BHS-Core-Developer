@@ -74,3 +74,5 @@
 /Users/vanadium/Repos/BHS-Core-Developer/BHS/BHS/obj/Debug/net9.0/BHS.pdb
 /Users/vanadium/Repos/BHS-Core-Developer/BHS/BHS/obj/Debug/net9.0/BHS.genruntimeconfig.cache
 /Users/vanadium/Repos/BHS-Core-Developer/BHS/BHS/obj/Debug/net9.0/ref/BHS.dll
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/BHS/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/vanadium/Repos/BHS-Core-Developer/BHS/BHS/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
