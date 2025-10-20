@@ -98,7 +98,7 @@ BHS/
 
 ## 📘 Документация
 
-📥 [Скачать документацию (index.html)](https://github.com/vanadiumdev/BHS-Core-Developer/Output/html/index.html)
+📥 [Скачать документацию (index.html)](https://github.com/vanadium19/BHS-Core-Developer/Output/html/index.html)
 
 Результат:  
 `Output/html/index.html`
