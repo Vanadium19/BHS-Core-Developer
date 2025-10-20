@@ -13,6 +13,7 @@
           "Avalonia.Diagnostics": "11.3.6",
           "Avalonia.Fonts.Inter": "11.3.6",
           "Avalonia.Themes.Fluent": "11.3.6",
+          "Doxygen": "1.8.14",
           "LeoEcs": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "10.0.0-rc.2.25502.107"
         },
@@ -250,6 +251,7 @@
           }
         }
       },
+      "Doxygen/1.8.14": {},
       "HarfBuzzSharp/8.3.1.1": {
         "dependencies": {
           "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1",
@@ -577,6 +579,13 @@
       "sha512": "sha512-6NKE1py4zbkMJg++2rMJHyjEXNo2JU0Nj9nEMnXh2gyHyfclhULIGIqmpsLvJ7Ljv1+6iLDqArCFRn+mi1hANw==",
       "path": "avalonia.x11/11.3.6",
       "hashPath": "avalonia.x11.11.3.6.nupkg.sha512"
+    },
+    "Doxygen/1.8.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2a9Cx5QwwZC3D5tFvRQdSNdjVSIA7INtnHbxq9ogkrbkTBI5XZiS0oI5cln6aNL3M1YuVbGZL2YHIMThbVJRwQ==",
+      "path": "doxygen/1.8.14",
+      "hashPath": "doxygen.1.8.14.nupkg.sha512"
     },
     "HarfBuzzSharp/8.3.1.1": {
       "type": "package",
