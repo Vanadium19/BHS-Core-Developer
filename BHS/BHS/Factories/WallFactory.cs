@@ -21,7 +21,7 @@ namespace BHS.Factories;
 /// связывает его с сущностью через <see cref="LinkToSceneObject"/> и добавляет на сцену.
 /// </para>
 /// </remarks>
-public class WallFactory
+public sealed class WallFactory
 {
     private const float CenterLerp = 0.5f;
 

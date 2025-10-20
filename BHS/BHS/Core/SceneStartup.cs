@@ -16,7 +16,7 @@ namespace BHS.Core;
 /// соответствующих ECS-сущностей и их визуальных представлений на сцену.
 /// </para>
 /// </remarks>
-public class SceneStartup
+public sealed class SceneStartup
 {
     private readonly WallFactory _wallFactory;
     private readonly BallFactory _ballFactory;

@@ -25,7 +25,7 @@ namespace BHS.Core;
 /// </list>
 /// </para>
 /// </remarks>
-public class AppStartup
+public sealed class AppStartup
 {
     /// <summary>
     /// Регистрирует все сервисы, фабрики и основные классы приложения в контейнере зависимостей.

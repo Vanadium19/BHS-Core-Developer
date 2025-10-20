@@ -19,7 +19,7 @@ namespace BHS.View;
 /// <see cref="Dispatcher.UIThread"/> для обеспечения потокобезопасности.
 /// </para>
 /// </remarks>
-public class Scene : ISceneService
+public sealed class Scene : ISceneService
 {
     private readonly List<SceneObject> _objects = new();
     private readonly MainWindow _window;

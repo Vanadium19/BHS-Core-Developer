@@ -16,7 +16,7 @@ namespace BHS.Core;
 /// в игровом цикле методом <see cref="Run"/>, а при завершении — освобождает ресурсы.
 /// </para>
 /// </remarks>
-public class EcsStartup : IEcsService
+public sealed class EcsStartup : IEcsService
 {
     private readonly EcsWorld _world;
 

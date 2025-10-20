@@ -26,7 +26,7 @@ namespace BHS.Factories;
 /// </list>
 /// </para>
 /// </remarks>
-public class BallFactory
+public sealed class BallFactory
 {
     private readonly ISceneService _scene;
     private readonly EcsWorld _world;
