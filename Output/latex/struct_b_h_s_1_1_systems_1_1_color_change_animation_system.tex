@@ -1,0 +1,34 @@
+\doxysection{BHS.\+Systems.\+Color\+Change\+Animation\+System Struct Reference}
+\hypertarget{struct_b_h_s_1_1_systems_1_1_color_change_animation_system}{}\label{struct_b_h_s_1_1_systems_1_1_color_change_animation_system}\index{BHS.Systems.ColorChangeAnimationSystem@{BHS.Systems.ColorChangeAnimationSystem}}
+
+
+Система анимации изменения цвета объектов сцены.  
+
+
+Inheritance diagram for BHS.\+Systems.\+Color\+Change\+Animation\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_b_h_s_1_1_systems_1_1_color_change_animation_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_color_change_animation_system_a22af55920be8f405358f9695937c40c6}\label{struct_b_h_s_1_1_systems_1_1_color_change_animation_system_a22af55920be8f405358f9695937c40c6} 
+void {\bfseries Init} (IEcs\+Systems systems)
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_color_change_animation_system_a4af6962cdd3d5001ad61153751d1956e}\label{struct_b_h_s_1_1_systems_1_1_color_change_animation_system_a4af6962cdd3d5001ad61153751d1956e} 
+void {\bfseries Run} (IEcs\+Systems systems)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Система анимации изменения цвета объектов сцены. 
+
+\doxylink{struct_b_h_s_1_1_systems_1_1_color_change_animation_system}{Color\+Change\+Animation\+System} управляет постепенным возвращением цвета объекта к исходному после события \doxylink{struct_b_h_s_1_1_events_1_1_color_change_event}{BHS.\+Events.\+Color\+Change\+Event}. 
+
+Для каждой сущности, имеющей \doxylink{struct_b_h_s_1_1_components_1_1_link_to_scene_object}{Link\+To\+Scene\+Object} и \doxylink{struct_b_h_s_1_1_components_1_1_color_animation_component}{Color\+Animation\+Component}, система уменьшает таймер анимации ({\ttfamily Current\+Time}) на каждом кадре и по его завершении восстанавливает начальный цвет ({\ttfamily Start\+Color}). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Systems/Color\+Change\+Animation\+System.\+cs\end{DoxyCompactItemize}

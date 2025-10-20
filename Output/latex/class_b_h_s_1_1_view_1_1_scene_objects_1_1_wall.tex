@@ -1,0 +1,66 @@
+\doxysection{BHS.\+View.\+Scene\+Objects.\+Wall Class Reference}
+\hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}{}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}\index{BHS.View.SceneObjects.Wall@{BHS.View.SceneObjects.Wall}}
+
+
+Визуальное представление стены на сцене.  
+
+
+Inheritance diagram for BHS.\+View.\+Scene\+Objects.\+Wall\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall_a420146af08897aa2894466c45af027d1}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall_a420146af08897aa2894466c45af027d1} 
+{\bfseries Wall} (Vector2 position, Vector2 start, Vector2 end)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{BHS.\+View.\+Scene\+Objects.\+Scene\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a030882e2c9b578a33a9433098e1fb7c8}{Set\+Position}} (Vector2 value)
+\begin{DoxyCompactList}\small\item\em Устанавливает новую позицию объекта. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_ab68163714a08e9f3de7e4142adb9e64f}{Update\+Color}} (IImmutable\+Solid\+Color\+Brush value)
+\begin{DoxyCompactList}\small\item\em Обновляет цвет объекта. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7e9a9746fb4a72d6057ba2460962a717}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Отрисовывает объект на сцене. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall_a173efe62cb1e03316ebe5585258d0880}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall_a173efe62cb1e03316ebe5585258d0880} 
+override void {\bfseries Update\+Color\+Internal} (IImmutable\+Solid\+Color\+Brush value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{BHS.\+View.\+Scene\+Objects.\+Scene\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Scene\+Object} (Vector2 position)
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7a116661b0a1fde3397f5f0169e06074}{Update\+Color\+Internal}} (IImmutable\+Solid\+Color\+Brush value)
+\begin{DoxyCompactList}\small\item\em Абстрактный метод для непосредственного изменения цвета фигуры. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall_a44af51d806647eb5764791de587bcf8a}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall_a44af51d806647eb5764791de587bcf8a} 
+override Shape {\bfseries Shape}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Фигура Avalonia, представляющая линию стены. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{BHS.\+View.\+Scene\+Objects.\+Scene\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Shape {\bfseries Shape}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Фигура Avalonia, представляющая визуальную форму объекта. \end{DoxyCompactList}\item 
+Vector2 {\bfseries Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Текущая позиция объекта на сцене. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Визуальное представление стены на сцене. 
+
+\doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}{Wall} наследуется от \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{Scene\+Object} и отображается в виде линии (Line), определяемой точками начала и конца. 
+
+Стена используется для взаимодействия с шариком — система столкновений (\doxylink{struct_b_h_s_1_1_systems_1_1_check_collision_system}{BHS.\+Systems.\+Check\+Collision\+System}) вычисляет нормали и отскоки на её основе. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View/\+Scene\+Objects/Wall.\+cs\end{DoxyCompactItemize}

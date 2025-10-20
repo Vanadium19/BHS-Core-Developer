@@ -1,0 +1,52 @@
+\doxysection{BHS.\+Core.\+App\+Startup Class Reference}
+\hypertarget{class_b_h_s_1_1_core_1_1_app_startup}{}\label{class_b_h_s_1_1_core_1_1_app_startup}\index{BHS.Core.AppStartup@{BHS.Core.AppStartup}}
+
+
+Класс, выполняющий регистрацию всех сервисов и фабрик приложения.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_core_1_1_app_startup_a645f428c5b4d749dc9d17b588f0526ce}{Configure\+Services}} (IService\+Collection services)
+\begin{DoxyCompactList}\small\item\em Регистрирует все сервисы, фабрики и основные классы приложения в контейнере зависимостей. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, выполняющий регистрацию всех сервисов и фабрик приложения. 
+
+\doxylink{class_b_h_s_1_1_core_1_1_app_startup}{App\+Startup} конфигурирует контейнер зависимостей с помощью библиотеки Microsoft.\+Extensions.\+Dependency\+Injection. 
+
+В рамках инициализации регистрируются\+: 
+\begin{DoxyItemize}
+\item \doxylink{class_b_h_s_1_1_main_window}{Main\+Window} — главное окно приложения; 
+\item Ecs\+World — ECS-\/мир; 
+\item \doxylink{interface_b_h_s_1_1_view_1_1_i_scene_service}{IScene\+Service} (реализация \doxylink{class_b_h_s_1_1_view_1_1_scene}{Scene}) — сервис управления сценой; 
+\item \doxylink{interface_b_h_s_1_1_core_1_1_i_ecs_service}{IEcs\+Service} (реализация \doxylink{class_b_h_s_1_1_core_1_1_ecs_startup}{Ecs\+Startup}) — управление ECS-\/системами; 
+\item \doxylink{class_b_h_s_1_1_factories_1_1_ball_factory}{Ball\+Factory} и \doxylink{class_b_h_s_1_1_factories_1_1_wall_factory}{Wall\+Factory} — фабрики для создания объектов; 
+\item \doxylink{class_b_h_s_1_1_core_1_1_scene_startup}{Scene\+Startup} — инициализация стартовой сцены. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_core_1_1_app_startup_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_core_1_1_app_startup_a645f428c5b4d749dc9d17b588f0526ce}\index{BHS.Core.AppStartup@{BHS.Core.AppStartup}!ConfigureServices@{ConfigureServices}}
+\index{ConfigureServices@{ConfigureServices}!BHS.Core.AppStartup@{BHS.Core.AppStartup}}
+\doxysubsubsection{\texorpdfstring{ConfigureServices()}{ConfigureServices()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_core_1_1_app_startup_a645f428c5b4d749dc9d17b588f0526ce} 
+void BHS.\+Core.\+App\+Startup.\+Configure\+Services (\begin{DoxyParamCaption}\item[{IService\+Collection}]{services}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Регистрирует все сервисы, фабрики и основные классы приложения в контейнере зависимостей. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em services} & Коллекция сервисов IService\+Collection, используемая для конфигурации DI-\/контейнера. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/App\+Startup.\+cs\end{DoxyCompactItemize}

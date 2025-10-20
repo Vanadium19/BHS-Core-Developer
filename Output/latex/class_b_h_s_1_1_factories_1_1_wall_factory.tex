@@ -1,0 +1,59 @@
+\doxysection{BHS.\+Factories.\+Wall\+Factory Class Reference}
+\hypertarget{class_b_h_s_1_1_factories_1_1_wall_factory}{}\label{class_b_h_s_1_1_factories_1_1_wall_factory}\index{BHS.Factories.WallFactory@{BHS.Factories.WallFactory}}
+
+
+Фабрика для создания стен в ECS-\/мире и их визуальных представлений в сцене.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_factories_1_1_wall_factory_ace376ddf94a60cddfbe22db92f57b57a}\label{class_b_h_s_1_1_factories_1_1_wall_factory_ace376ddf94a60cddfbe22db92f57b57a} 
+{\bfseries Wall\+Factory} (\mbox{\hyperlink{interface_b_h_s_1_1_view_1_1_i_scene_service}{IScene\+Service}} scene, Ecs\+World world)
+\item 
+\mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}{Wall}} \mbox{\hyperlink{class_b_h_s_1_1_factories_1_1_wall_factory_a0b8fe38f6af83cc9240856eb9e93d203}{Create}} (Vector2 start, Vector2 end)
+\begin{DoxyCompactList}\small\item\em Создаёт новую стену на основе координат начала и конца. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Фабрика для создания стен в ECS-\/мире и их визуальных представлений в сцене. 
+
+\doxylink{class_b_h_s_1_1_factories_1_1_wall_factory}{Wall\+Factory} инициализирует ECS-\/сущность, описывающую стену, — добавляет компонент \doxylink{struct_b_h_s_1_1_components_1_1_edge_component}{Edge\+Component} с координатами начала и конца отрезка, а также компонент \doxylink{struct_b_h_s_1_1_components_1_1_color_animation_component}{Color\+Animation\+Component} для обработки анимации цвета. 
+
+После создания ECS-\/компонентов фабрика создаёт визуальный объект \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}{Wall}, связывает его с сущностью через \doxylink{struct_b_h_s_1_1_components_1_1_link_to_scene_object}{Link\+To\+Scene\+Object} и добавляет на сцену. 
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_factories_1_1_wall_factory_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_factories_1_1_wall_factory_a0b8fe38f6af83cc9240856eb9e93d203}\index{BHS.Factories.WallFactory@{BHS.Factories.WallFactory}!Create@{Create}}
+\index{Create@{Create}!BHS.Factories.WallFactory@{BHS.Factories.WallFactory}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_factories_1_1_wall_factory_a0b8fe38f6af83cc9240856eb9e93d203} 
+\mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}{Wall}} BHS.\+Factories.\+Wall\+Factory.\+Create (\begin{DoxyParamCaption}\item[{Vector2}]{start}{, }\item[{Vector2}]{end}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Создаёт новую стену на основе координат начала и конца. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & Координаты начала стены.\\
+\hline
+{\em end} & Координаты конца стены.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Созданный визуальный объект \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}{Wall}.
+\end{DoxyReturn}
+
+
+Метод добавляет в ECS-\/мир сущность с компонентами\+: 
+\begin{DoxyItemize}
+\item \doxylink{struct_b_h_s_1_1_components_1_1_edge_component}{Edge\+Component} — геометрическое описание стены; 
+\item \doxylink{struct_b_h_s_1_1_components_1_1_color_animation_component}{Color\+Animation\+Component} — данные для цветовой анимации; 
+\item \doxylink{struct_b_h_s_1_1_components_1_1_link_to_scene_object}{Link\+To\+Scene\+Object} — связь с объектом сцены. 
+\end{DoxyItemize}Также вычисляет центр стены для корректного позиционирования визуального объекта. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Factories/Wall\+Factory.\+cs\end{DoxyCompactItemize}

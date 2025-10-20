@@ -1,0 +1,37 @@
+\doxysection{BHS.\+Systems.\+Collision\+Handling\+System Struct Reference}
+\hypertarget{struct_b_h_s_1_1_systems_1_1_collision_handling_system}{}\label{struct_b_h_s_1_1_systems_1_1_collision_handling_system}\index{BHS.Systems.CollisionHandlingSystem@{BHS.Systems.CollisionHandlingSystem}}
+
+
+Система обработки столкновений, изменяющая направление движения сущностей после удара.  
+
+
+Inheritance diagram for BHS.\+Systems.\+Collision\+Handling\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_b_h_s_1_1_systems_1_1_collision_handling_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_collision_handling_system_a8f49dd84da694c51f50088dd7dc9ff74}\label{struct_b_h_s_1_1_systems_1_1_collision_handling_system_a8f49dd84da694c51f50088dd7dc9ff74} 
+void {\bfseries Init} (IEcs\+Systems systems)
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_collision_handling_system_a3d1353a58a30b77816b291745a7f3775}\label{struct_b_h_s_1_1_systems_1_1_collision_handling_system_a3d1353a58a30b77816b291745a7f3775} 
+void {\bfseries Run} (IEcs\+Systems systems)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Система обработки столкновений, изменяющая направление движения сущностей после удара. 
+
+\doxylink{struct_b_h_s_1_1_systems_1_1_collision_handling_system}{Collision\+Handling\+System} реагирует на события столкновения (\doxylink{struct_b_h_s_1_1_events_1_1_collision_event}{Collision\+Event}) ~\newline
+ и обновляет направление движения сущностей с компонентом \doxylink{struct_b_h_s_1_1_components_1_1_direction_component}{Direction\+Component}. 
+
+Новое направление вычисляется путём отражения вектора скорости от нормали поверхности по формуле\+: {\ttfamily v\textquotesingle{} = v -\/ 2 \texorpdfstring{$\ast$}{*} (v ⋅ n) \texorpdfstring{$\ast$}{*} n}, где {\ttfamily v} — текущий вектор направления, {\ttfamily n} — нормаль к стене. 
+
+После обработки событие столкновения удаляется из мира ECS. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Systems/Collision\+Handling\+System.\+cs\end{DoxyCompactItemize}

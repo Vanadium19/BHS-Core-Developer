@@ -1,0 +1,42 @@
+\doxysection{BHS.\+Core.\+Scene\+Startup Class Reference}
+\hypertarget{class_b_h_s_1_1_core_1_1_scene_startup}{}\label{class_b_h_s_1_1_core_1_1_scene_startup}\index{BHS.Core.SceneStartup@{BHS.Core.SceneStartup}}
+
+
+Класс, выполняющий инициализацию сцены и создание игровых объектов.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_core_1_1_scene_startup_a795de583b5afbb857ed8f96d58e52e07}\label{class_b_h_s_1_1_core_1_1_scene_startup_a795de583b5afbb857ed8f96d58e52e07} 
+{\bfseries Scene\+Startup} (\mbox{\hyperlink{class_b_h_s_1_1_factories_1_1_wall_factory}{Wall\+Factory}} wall\+Factory, \mbox{\hyperlink{class_b_h_s_1_1_factories_1_1_ball_factory}{Ball\+Factory}} ball\+Factory)
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_core_1_1_scene_startup_a7879d0437a34e64ce9aa01ab2f0377a8}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Инициализирует сцену, создавая шарик и стены. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, выполняющий инициализацию сцены и создание игровых объектов. 
+
+\doxylink{class_b_h_s_1_1_core_1_1_scene_startup}{Scene\+Startup} отвечает за построение начального состояния сцены — создаёт все стены и один шарик с параметрами из Objects\+Data. 
+
+Использует фабрики \doxylink{class_b_h_s_1_1_factories_1_1_wall_factory}{Wall\+Factory} и \doxylink{class_b_h_s_1_1_factories_1_1_ball_factory}{Ball\+Factory} для добавления соответствующих ECS-\/сущностей и их визуальных представлений на сцену. 
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_core_1_1_scene_startup_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_core_1_1_scene_startup_a7879d0437a34e64ce9aa01ab2f0377a8}\index{BHS.Core.SceneStartup@{BHS.Core.SceneStartup}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!BHS.Core.SceneStartup@{BHS.Core.SceneStartup}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_core_1_1_scene_startup_a7879d0437a34e64ce9aa01ab2f0377a8} 
+void BHS.\+Core.\+Scene\+Startup.\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Инициализирует сцену, создавая шарик и стены. 
+
+Последовательно вызывает методы Create\+Ball и Create\+Walls, которые создают все игровые объекты. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Scene\+Startup.\+cs\end{DoxyCompactItemize}

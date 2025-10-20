@@ -1,0 +1,94 @@
+\doxysection{BHS.\+View.\+Scene Class Reference}
+\hypertarget{class_b_h_s_1_1_view_1_1_scene}{}\label{class_b_h_s_1_1_view_1_1_scene}\index{BHS.View.Scene@{BHS.View.Scene}}
+
+
+Сцена, содержащая визуальные объекты и управляющая их отрисовкой.  
+
+
+Inheritance diagram for BHS.\+View.\+Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_h_s_1_1_view_1_1_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_aabbe447edcb07aea825a1b238941abf9}\label{class_b_h_s_1_1_view_1_1_scene_aabbe447edcb07aea825a1b238941abf9} 
+{\bfseries Scene} (\mbox{\hyperlink{class_b_h_s_1_1_main_window}{Main\+Window}} window)
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_aad5e44ee5730d0295a5e97ccfd26da0c}{Add}} (\mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{Scene\+Object}} scene\+Object)
+\begin{DoxyCompactList}\small\item\em Добавляет объект на сцену и регистрирует его визуальное представление в окне. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_a59e501d23a78dd175bf5595b9ba6d1fa}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Выполняет отрисовку всех объектов сцены. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_a1fdcb7e6a5f4247ae301becac5618cf8}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет все объекты сцены из окна и освобождает ресурсы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Сцена, содержащая визуальные объекты и управляющая их отрисовкой. 
+
+Класс \doxylink{class_b_h_s_1_1_view_1_1_scene}{Scene} реализует интерфейс \doxylink{interface_b_h_s_1_1_view_1_1_i_scene_service}{IScene\+Service} и отвечает за управление жизненным циклом визуальных объектов сцены — их добавлением, отображением и удалением. 
+
+Все операции визуального обновления выполняются в UI-\/потоке Avalonia через Dispatcher.\+UIThread для обеспечения потокобезопасности. 
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_aad5e44ee5730d0295a5e97ccfd26da0c}\index{BHS.View.Scene@{BHS.View.Scene}!Add@{Add}}
+\index{Add@{Add}!BHS.View.Scene@{BHS.View.Scene}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_view_1_1_scene_aad5e44ee5730d0295a5e97ccfd26da0c} 
+void BHS.\+View.\+Scene.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{Scene\+Object}}}]{scene\+Object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Добавляет объект на сцену и регистрирует его визуальное представление в окне. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+Object} & Объект сцены, который необходимо добавить.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Выбрасывается, если попытаться добавить объект, который уже присутствует на сцене. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_b_h_s_1_1_view_1_1_i_scene_service_ab7cfca626fe89b4f6d30f8b99261577a}{BHS.\+View.\+IScene\+Service}}.
+
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_a1fdcb7e6a5f4247ae301becac5618cf8}\index{BHS.View.Scene@{BHS.View.Scene}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BHS.View.Scene@{BHS.View.Scene}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_view_1_1_scene_a1fdcb7e6a5f4247ae301becac5618cf8} 
+void BHS.\+View.\+Scene.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Удаляет все объекты сцены из окна и освобождает ресурсы. 
+
+
+
+Implements \mbox{\hyperlink{interface_b_h_s_1_1_view_1_1_i_scene_service_a43d25ceafbf264d334b1fb0388767ac1}{BHS.\+View.\+IScene\+Service}}.
+
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_a59e501d23a78dd175bf5595b9ba6d1fa}\index{BHS.View.Scene@{BHS.View.Scene}!Render@{Render}}
+\index{Render@{Render}!BHS.View.Scene@{BHS.View.Scene}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_view_1_1_scene_a59e501d23a78dd175bf5595b9ba6d1fa} 
+void BHS.\+View.\+Scene.\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Выполняет отрисовку всех объектов сцены. 
+
+Метод вызывает \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7e9a9746fb4a72d6057ba2460962a717}{Scene\+Object.\+Render} для каждого объекта, помещая вызовы в очередь UI-\/потока Avalonia. 
+
+Implements \mbox{\hyperlink{interface_b_h_s_1_1_view_1_1_i_scene_service_aa81f691d8ef314ba22ccbd6fbeeba83f}{BHS.\+View.\+IScene\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View/Scene.\+cs\end{DoxyCompactItemize}

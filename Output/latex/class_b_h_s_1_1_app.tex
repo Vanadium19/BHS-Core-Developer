@@ -1,0 +1,53 @@
+\doxysection{BHS.\+App Class Reference}
+\hypertarget{class_b_h_s_1_1_app}{}\label{class_b_h_s_1_1_app}\index{BHS.App@{BHS.App}}
+
+
+Главный класс приложения, отвечающий за инициализацию и запуск игрового цикла.  
+
+
+Inheritance diagram for BHS.\+App\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_h_s_1_1_app}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_app_a77fd410dbfcfb6e80e83c0a3c98b266a}\label{class_b_h_s_1_1_app_a77fd410dbfcfb6e80e83c0a3c98b266a} 
+override void {\bfseries Initialize} ()
+\begin{DoxyCompactList}\small\item\em Загружает ресурсы XAML и инициализирует базовое состояние Avalonia-\/приложения. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_b_h_s_1_1_app_a24011c3ee0459e4dbd3c76263f184f64}{On\+Framework\+Initialization\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em Выполняет инициализацию инфраструктуры приложения после загрузки Avalonia-\/фреймворка. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Главный класс приложения, отвечающий за инициализацию и запуск игрового цикла. 
+
+\doxylink{class_b_h_s_1_1_app}{App} наследуется от Application Avalonia и управляет жизненным циклом всего приложения. В процессе запуска создаёт контейнер зависимостей, регистрирует все сервисы через \doxylink{class_b_h_s_1_1_core_1_1_app_startup}{App\+Startup} и инициализирует ECS-\/мир и визуальную сцену. 
+
+После инициализации запускается асинхронный игровой цикл, который выполняет\+: 
+\begin{DoxyItemize}
+\item обновление логики ECS через \doxylink{interface_b_h_s_1_1_core_1_1_i_ecs_service}{IEcs\+Service}; 
+\item отрисовку объектов сцены через \doxylink{interface_b_h_s_1_1_view_1_1_i_scene_service}{IScene\+Service}; 
+\item задержку между кадрами, определяемую Game\+Constants.\+Sleep\+Time. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_app_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_app_a24011c3ee0459e4dbd3c76263f184f64}\index{BHS.App@{BHS.App}!OnFrameworkInitializationCompleted@{OnFrameworkInitializationCompleted}}
+\index{OnFrameworkInitializationCompleted@{OnFrameworkInitializationCompleted}!BHS.App@{BHS.App}}
+\doxysubsubsection{\texorpdfstring{OnFrameworkInitializationCompleted()}{OnFrameworkInitializationCompleted()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_app_a24011c3ee0459e4dbd3c76263f184f64} 
+override void BHS.\+App.\+On\+Framework\+Initialization\+Completed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Выполняет инициализацию инфраструктуры приложения после загрузки Avalonia-\/фреймворка. 
+
+Создаёт контейнер зависимостей, получает сервисы \doxylink{interface_b_h_s_1_1_core_1_1_i_ecs_service}{IEcs\+Service}, \doxylink{interface_b_h_s_1_1_view_1_1_i_scene_service}{IScene\+Service} и запускает инициализацию сцены и ECS. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+App.\+axaml.\+cs\end{DoxyCompactItemize}

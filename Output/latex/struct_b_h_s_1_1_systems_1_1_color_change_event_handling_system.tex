@@ -1,0 +1,34 @@
+\doxysection{BHS.\+Systems.\+Color\+Change\+Event\+Handling\+System Struct Reference}
+\hypertarget{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system}{}\label{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system}\index{BHS.Systems.ColorChangeEventHandlingSystem@{BHS.Systems.ColorChangeEventHandlingSystem}}
+
+
+Система обработки событий изменения цвета у объектов сцены.  
+
+
+Inheritance diagram for BHS.\+Systems.\+Color\+Change\+Event\+Handling\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.891892cm]{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system_abbefe547b9ab6bb5a323047aa978a7f9}\label{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system_abbefe547b9ab6bb5a323047aa978a7f9} 
+void {\bfseries Init} (IEcs\+Systems systems)
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system_a2c72b028e546da98dd19812d59a8ba91}\label{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system_a2c72b028e546da98dd19812d59a8ba91} 
+void {\bfseries Run} (IEcs\+Systems systems)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Система обработки событий изменения цвета у объектов сцены. 
+
+\doxylink{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system}{Color\+Change\+Event\+Handling\+System} реагирует на события \doxylink{struct_b_h_s_1_1_events_1_1_color_change_event}{Color\+Change\+Event}, обновляя визуальное состояние объектов сцены, связанных через компонент \doxylink{struct_b_h_s_1_1_components_1_1_link_to_scene_object}{Link\+To\+Scene\+Object}. 
+
+При получении события система применяет цветовую анимацию, устанавливает целевой цвет из \doxylink{struct_b_h_s_1_1_components_1_1_color_animation_component}{Color\+Animation\+Component} и удаляет обработанное событие из ECS-\/мира. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Systems/Color\+Change\+Event\+Handling\+System.\+cs\end{DoxyCompactItemize}

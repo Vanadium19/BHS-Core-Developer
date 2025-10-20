@@ -1,0 +1,117 @@
+\doxysection{BHS.\+View.\+Scene\+Objects.\+Scene\+Object Class Reference}
+\hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}\index{BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}}
+
+
+Абстрактный базовый класс визуального объекта сцены.  
+
+
+Inheritance diagram for BHS.\+View.\+Scene\+Objects.\+Scene\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a030882e2c9b578a33a9433098e1fb7c8}{Set\+Position}} (Vector2 value)
+\begin{DoxyCompactList}\small\item\em Устанавливает новую позицию объекта. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_ab68163714a08e9f3de7e4142adb9e64f}{Update\+Color}} (IImmutable\+Solid\+Color\+Brush value)
+\begin{DoxyCompactList}\small\item\em Обновляет цвет объекта. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7e9a9746fb4a72d6057ba2460962a717}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Отрисовывает объект на сцене. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a50fc0febe28e9b831b5c4c899d038f39}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a50fc0febe28e9b831b5c4c899d038f39} 
+{\bfseries Scene\+Object} (Vector2 position)
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7a116661b0a1fde3397f5f0169e06074}{Update\+Color\+Internal}} (IImmutable\+Solid\+Color\+Brush value)
+\begin{DoxyCompactList}\small\item\em Абстрактный метод для непосредственного изменения цвета фигуры. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_aa99ddd3071c7bd711eb37dae92cfca92}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_aa99ddd3071c7bd711eb37dae92cfca92} 
+Shape {\bfseries Shape}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Фигура Avalonia, представляющая визуальную форму объекта. \end{DoxyCompactList}\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a99d63692fffd28b5b961c796abf8d0e7}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a99d63692fffd28b5b961c796abf8d0e7} 
+Vector2 {\bfseries Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Текущая позиция объекта на сцене. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Абстрактный базовый класс визуального объекта сцены. 
+
+\doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{Scene\+Object} определяет общие свойства и поведение всех визуальных элементов, отображаемых на сцене — таких как \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}{Ball} и \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_wall}{Wall}. 
+
+Содержит информацию о позиции, форму для отображения, а также методы для обновления цвета и визуализации. Обновления цвета выполняются в UI-\/потоке Avalonia через Dispatcher.\+UIThread. 
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7e9a9746fb4a72d6057ba2460962a717}\index{BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}!Render@{Render}}
+\index{Render@{Render}!BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7e9a9746fb4a72d6057ba2460962a717} 
+virtual void BHS.\+View.\+Scene\+Objects.\+Scene\+Object.\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Отрисовывает объект на сцене. 
+
+Может быть переопределён наследниками для реализации пользовательской логики отрисовки. 
+
+Reimplemented in \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_a84899587a6912bf62176b3372ef25e3a}{BHS.\+View.\+Scene\+Objects.\+Ball}}.
+
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a030882e2c9b578a33a9433098e1fb7c8}\index{BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a030882e2c9b578a33a9433098e1fb7c8} 
+void BHS.\+View.\+Scene\+Objects.\+Scene\+Object.\+Set\+Position (\begin{DoxyParamCaption}\item[{Vector2}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Устанавливает новую позицию объекта. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Координаты новой позиции.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_ab68163714a08e9f3de7e4142adb9e64f}\index{BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}!UpdateColor@{UpdateColor}}
+\index{UpdateColor@{UpdateColor}!BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}}
+\doxysubsubsection{\texorpdfstring{UpdateColor()}{UpdateColor()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_ab68163714a08e9f3de7e4142adb9e64f} 
+void BHS.\+View.\+Scene\+Objects.\+Scene\+Object.\+Update\+Color (\begin{DoxyParamCaption}\item[{IImmutable\+Solid\+Color\+Brush}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Обновляет цвет объекта. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Новый цвет в виде неизменяемой кисти.\\
+\hline
+\end{DoxyParams}
+
+
+Вызов выполняется в UI-\/потоке через Dispatcher.\+UIThread, чтобы гарантировать корректное обновление интерфейса. \Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7a116661b0a1fde3397f5f0169e06074}\index{BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}!UpdateColorInternal@{UpdateColorInternal}}
+\index{UpdateColorInternal@{UpdateColorInternal}!BHS.View.SceneObjects.SceneObject@{BHS.View.SceneObjects.SceneObject}}
+\doxysubsubsection{\texorpdfstring{UpdateColorInternal()}{UpdateColorInternal()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7a116661b0a1fde3397f5f0169e06074} 
+void BHS.\+View.\+Scene\+Objects.\+Scene\+Object.\+Update\+Color\+Internal (\begin{DoxyParamCaption}\item[{IImmutable\+Solid\+Color\+Brush}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+
+
+Абстрактный метод для непосредственного изменения цвета фигуры. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Цвет, который должен быть установлен.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View/\+Scene\+Objects/Scene\+Object.\+cs\end{DoxyCompactItemize}

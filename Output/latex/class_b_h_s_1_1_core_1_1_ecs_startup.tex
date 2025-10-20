@@ -1,0 +1,92 @@
+\doxysection{BHS.\+Core.\+Ecs\+Startup Class Reference}
+\hypertarget{class_b_h_s_1_1_core_1_1_ecs_startup}{}\label{class_b_h_s_1_1_core_1_1_ecs_startup}\index{BHS.Core.EcsStartup@{BHS.Core.EcsStartup}}
+
+
+Класс инициализации и управления ECS-\/миром.  
+
+
+Inheritance diagram for BHS.\+Core.\+Ecs\+Startup\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_h_s_1_1_core_1_1_ecs_startup}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_core_1_1_ecs_startup_ab78865bf7df0e71eede1c5d5d7a26ab8}\label{class_b_h_s_1_1_core_1_1_ecs_startup_ab78865bf7df0e71eede1c5d5d7a26ab8} 
+{\bfseries Ecs\+Startup} (Ecs\+World world)
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_core_1_1_ecs_startup_aa854698fbac706e2de3c5a3a9c6a5810}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Инициализирует ECS-\/мир и регистрирует все игровые системы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_core_1_1_ecs_startup_a187cbcc7d21a4d3d056a6d38b8fa0012}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Выполняет один цикл обновления всех активных ECS-\/систем. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_core_1_1_ecs_startup_ac82fb23dae5df59e13863a19304ece31}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Уничтожает ECS-\/мир и освобождает все ресурсы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс инициализации и управления ECS-\/миром. 
+
+\doxylink{class_b_h_s_1_1_core_1_1_ecs_startup}{Ecs\+Startup} создаёт ECS-\/мир (Ecs\+World) и регистрирует все игровые системы, управляющие логикой симуляции. 
+
+После инициализации через метод \doxylink{class_b_h_s_1_1_core_1_1_ecs_startup_aa854698fbac706e2de3c5a3a9c6a5810}{Initialize} выполняет обновление систем в игровом цикле методом \doxylink{class_b_h_s_1_1_core_1_1_ecs_startup_a187cbcc7d21a4d3d056a6d38b8fa0012}{Run}, а при завершении — освобождает ресурсы. 
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_core_1_1_ecs_startup_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_core_1_1_ecs_startup_ac82fb23dae5df59e13863a19304ece31}\index{BHS.Core.EcsStartup@{BHS.Core.EcsStartup}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BHS.Core.EcsStartup@{BHS.Core.EcsStartup}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_core_1_1_ecs_startup_ac82fb23dae5df59e13863a19304ece31} 
+void BHS.\+Core.\+Ecs\+Startup.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Уничтожает ECS-\/мир и освобождает все ресурсы. 
+
+
+
+Implements \mbox{\hyperlink{interface_b_h_s_1_1_core_1_1_i_ecs_service_a12952d6fb3397e8129668654ef82869b}{BHS.\+Core.\+IEcs\+Service}}.
+
+\Hypertarget{class_b_h_s_1_1_core_1_1_ecs_startup_aa854698fbac706e2de3c5a3a9c6a5810}\index{BHS.Core.EcsStartup@{BHS.Core.EcsStartup}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!BHS.Core.EcsStartup@{BHS.Core.EcsStartup}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_core_1_1_ecs_startup_aa854698fbac706e2de3c5a3a9c6a5810} 
+void BHS.\+Core.\+Ecs\+Startup.\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Инициализирует ECS-\/мир и регистрирует все игровые системы. 
+
+Список добавляемых систем\+: 
+\begin{DoxyItemize}
+\item \doxylink{struct_b_h_s_1_1_systems_1_1_move_system}{Move\+System} — перемещение сущностей; 
+\item \doxylink{struct_b_h_s_1_1_systems_1_1_check_collision_system}{Check\+Collision\+System} — проверка столкновений; 
+\item \doxylink{struct_b_h_s_1_1_systems_1_1_collision_handling_system}{Collision\+Handling\+System} — обработка отражений; 
+\item \doxylink{struct_b_h_s_1_1_systems_1_1_color_change_event_handling_system}{Color\+Change\+Event\+Handling\+System} — реакция на изменение цвета; 
+\item \doxylink{struct_b_h_s_1_1_systems_1_1_color_change_animation_system}{Color\+Change\+Animation\+System} — анимация возврата цвета; 
+\item \doxylink{struct_b_h_s_1_1_systems_1_1_position_sync_system}{Position\+Sync\+System} — синхронизация ECS с визуальной сценой. 
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{interface_b_h_s_1_1_core_1_1_i_ecs_service_a4cb88f3e61969b65bdfac3d8455d65d4}{BHS.\+Core.\+IEcs\+Service}}.
+
+\Hypertarget{class_b_h_s_1_1_core_1_1_ecs_startup_a187cbcc7d21a4d3d056a6d38b8fa0012}\index{BHS.Core.EcsStartup@{BHS.Core.EcsStartup}!Run@{Run}}
+\index{Run@{Run}!BHS.Core.EcsStartup@{BHS.Core.EcsStartup}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_core_1_1_ecs_startup_a187cbcc7d21a4d3d056a6d38b8fa0012} 
+void BHS.\+Core.\+Ecs\+Startup.\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Выполняет один цикл обновления всех активных ECS-\/систем. 
+
+
+
+Implements \mbox{\hyperlink{interface_b_h_s_1_1_core_1_1_i_ecs_service_ae8f754c52ddd0ff4b4bc4a3604e5568a}{BHS.\+Core.\+IEcs\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/Ecs\+Startup.\+cs\end{DoxyCompactItemize}
