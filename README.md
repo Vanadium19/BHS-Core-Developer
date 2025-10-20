@@ -98,11 +98,7 @@ BHS/
 
 ## 📘 Документация
 
-Сгенерировать документацию Doxygen:
-
-```bash
-doxygen Doxyfile
-```
+📥 [Скачать документацию (index.html)](https://github.com/vanadiumdev/BHS-Core-Developer/Output/html/index.html)
 
 Результат:  
 `Output/html/index.html`
