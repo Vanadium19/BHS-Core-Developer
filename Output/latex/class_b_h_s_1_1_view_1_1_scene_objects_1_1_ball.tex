@@ -1,0 +1,85 @@
+\doxysection{BHS.\+View.\+Scene\+Objects.\+Ball Class Reference}
+\hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}{}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}\index{BHS.View.SceneObjects.Ball@{BHS.View.SceneObjects.Ball}}
+
+
+Визуальное представление шарика на сцене.  
+
+
+Inheritance diagram for BHS.\+View.\+Scene\+Objects.\+Ball\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_a4fddb7acb3b6502561edfd6e498d7feb}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_a4fddb7acb3b6502561edfd6e498d7feb} 
+{\bfseries Ball} (Vector2 position)
+\item 
+override void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_a84899587a6912bf62176b3372ef25e3a}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Выполняет позиционирование шарика на сцене. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{BHS.\+View.\+Scene\+Objects.\+Scene\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a030882e2c9b578a33a9433098e1fb7c8}{Set\+Position}} (Vector2 value)
+\begin{DoxyCompactList}\small\item\em Устанавливает новую позицию объекта. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_ab68163714a08e9f3de7e4142adb9e64f}{Update\+Color}} (IImmutable\+Solid\+Color\+Brush value)
+\begin{DoxyCompactList}\small\item\em Обновляет цвет объекта. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_afaea26765b9ffac081657f51b646fda0}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_afaea26765b9ffac081657f51b646fda0} 
+override void {\bfseries Update\+Color\+Internal} (IImmutable\+Solid\+Color\+Brush value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{BHS.\+View.\+Scene\+Objects.\+Scene\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Scene\+Object} (Vector2 position)
+\item 
+void \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7a116661b0a1fde3397f5f0169e06074}{Update\+Color\+Internal}} (IImmutable\+Solid\+Color\+Brush value)
+\begin{DoxyCompactList}\small\item\em Абстрактный метод для непосредственного изменения цвета фигуры. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_a2e7bf2d633c06a895b676565c62d6dd0}\label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_a2e7bf2d633c06a895b676565c62d6dd0} 
+override Shape {\bfseries Shape}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Фигура Avalonia, представляющая шар (эллипс). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{BHS.\+View.\+Scene\+Objects.\+Scene\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Shape {\bfseries Shape}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Фигура Avalonia, представляющая визуальную форму объекта. \end{DoxyCompactList}\item 
+Vector2 {\bfseries Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Текущая позиция объекта на сцене. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Визуальное представление шарика на сцене. 
+
+\doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}{Ball} наследуется от \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{Scene\+Object} и отображается в виде круга (Ellipse). Параметры радиуса и цвета берутся из данных Objects\+Data.\+Ball. 
+
+Отрисовка выполняется в координатах сцены, а цвет может динамически изменяться при событиях столкновения или взаимодействия с системами ECS. 
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_a84899587a6912bf62176b3372ef25e3a}\index{BHS.View.SceneObjects.Ball@{BHS.View.SceneObjects.Ball}!Render@{Render}}
+\index{Render@{Render}!BHS.View.SceneObjects.Ball@{BHS.View.SceneObjects.Ball}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball_a84899587a6912bf62176b3372ef25e3a} 
+override void BHS.\+View.\+Scene\+Objects.\+Ball.\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Выполняет позиционирование шарика на сцене. 
+
+Центр фигуры совмещается с координатой позиции сущности ECS. 
+
+Reimplemented from \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object_a7e9a9746fb4a72d6057ba2460962a717}{BHS.\+View.\+Scene\+Objects.\+Scene\+Object}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View/\+Scene\+Objects/Ball.\+cs\end{DoxyCompactItemize}

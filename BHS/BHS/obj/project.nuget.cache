@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XsUsh/ml8do=",
+  "dgSpecHash": "budLyxZAUMI=",
   "success": true,
   "projectFilePath": "/Users/vanadium/Repos/BHS-Core-Developer/BHS/BHS/BHS.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "/Users/vanadium/.nuget/packages/avalonia.themes.simple/11.3.6/avalonia.themes.simple.11.3.6.nupkg.sha512",
     "/Users/vanadium/.nuget/packages/avalonia.win32/11.3.6/avalonia.win32.11.3.6.nupkg.sha512",
     "/Users/vanadium/.nuget/packages/avalonia.x11/11.3.6/avalonia.x11.11.3.6.nupkg.sha512",
+    "/Users/vanadium/.nuget/packages/doxygen/1.8.14/doxygen.1.8.14.nupkg.sha512",
     "/Users/vanadium/.nuget/packages/harfbuzzsharp/8.3.1.1/harfbuzzsharp.8.3.1.1.nupkg.sha512",
     "/Users/vanadium/.nuget/packages/harfbuzzsharp.nativeassets.linux/8.3.1.1/harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",
     "/Users/vanadium/.nuget/packages/harfbuzzsharp.nativeassets.macos/8.3.1.1/harfbuzzsharp.nativeassets.macos.8.3.1.1.nupkg.sha512",

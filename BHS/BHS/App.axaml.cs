@@ -10,6 +10,25 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BHS;
 
+/// <summary>
+/// Главный класс приложения, отвечающий за инициализацию и запуск игрового цикла.
+/// </summary>
+/// <remarks>
+/// <para>
+/// <see cref="App"/> наследуется от <see cref="Application"/> Avalonia и управляет
+/// жизненным циклом всего приложения. В процессе запуска создаёт контейнер зависимостей,
+/// регистрирует все сервисы через <see cref="AppStartup"/> и инициализирует ECS-мир
+/// и визуальную сцену.
+/// </para>
+/// <para>
+/// После инициализации запускается асинхронный игровой цикл, который выполняет:
+/// <list type="bullet">
+/// <item>обновление логики ECS через <see cref="IEcsService"/>;</item>
+/// <item>отрисовку объектов сцены через <see cref="ISceneService"/>;</item>
+/// <item>задержку между кадрами, определяемую <see cref="GameConstants.SleepTime"/>.</item>
+/// </list>
+/// </para>
+/// </remarks>
 public partial class App : Application
 {
     private readonly CancellationTokenSource _tokenSource = new();
@@ -17,11 +36,21 @@ public partial class App : Application
     private IEcsService _ecsService;
     private ISceneService _sceneService;
 
+    /// <summary>
+    /// Загружает ресурсы XAML и инициализирует базовое состояние Avalonia-приложения.
+    /// </summary>
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
     }
 
+    /// <summary>
+    /// Выполняет инициализацию инфраструктуры приложения после загрузки Avalonia-фреймворка.
+    /// </summary>
+    /// <remarks>
+    /// Создаёт контейнер зависимостей, получает сервисы <see cref="IEcsService"/>,
+    /// <see cref="ISceneService"/> и запускает инициализацию сцены и ECS.
+    /// </remarks>
     public override void OnFrameworkInitializationCompleted()
     {
         var services = new ServiceCollection();
@@ -45,12 +74,18 @@ public partial class App : Application
         var sceneStartup = provider.GetService<SceneStartup>();
         sceneStartup!.Initialize();
 
-        GameLoop();
+        StartGameLoop();
 
         base.OnFrameworkInitializationCompleted();
     }
 
-    private async void GameLoop()
+    /// <summary>
+    /// Запускает основной игровой цикл приложения.
+    /// </summary>
+    /// <remarks>
+    /// Выполняет обновление ECS и отрисовку сцены с фиксированным интервалом времени.
+    /// </remarks>
+    private async void StartGameLoop()
     {
         while (true)
         {
@@ -61,6 +96,9 @@ public partial class App : Application
         }
     }
 
+    /// <summary>
+    /// Освобождает все ресурсы и корректно завершает работу ECS и сцены.
+    /// </summary>
     private void Dispose()
     {
         _ecsService!.Dispose();

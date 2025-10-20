@@ -6,6 +6,20 @@ using Leopotam.EcsLite;
 
 namespace BHS.Systems;
 
+/// <summary>
+/// Система проверки столкновений между шариками и стенами в ECS-мире.
+/// </summary>
+/// <remarks>
+/// <para>
+/// <see cref="CheckCollisionSystem"/> определяет факт столкновения каждого шарика
+/// (сущности с компонентами <see cref="PositionComponent"/> и <see cref="RadiusComponent"/>) 
+/// со всеми стенами (сущностями, содержащими <see cref="EdgeComponent"/>).
+/// </para>
+/// <para>
+/// При обнаружении пересечения создаётся событие <see cref="CollisionEvent"/> для шарика
+/// и <see cref="ColorChangeEvent"/> для стены.
+/// </para>
+/// </remarks>
 public struct CheckCollisionSystem : IEcsInitSystem, IEcsRunSystem
 {
     private EcsFilter _balls;
@@ -57,6 +71,16 @@ public struct CheckCollisionSystem : IEcsInitSystem, IEcsRunSystem
         }
     }
 
+    /// <summary>
+    /// Вычисляет кратчайшее расстояние от точки до отрезка.
+    /// </summary>
+    /// <param name="point">Позиция центра шарика.</param>
+    /// <param name="edge">Компонент, описывающий стену (отрезок с началом и концом).</param>
+    /// <returns>Расстояние от центра шарика до ближайшей точки стены.</returns>
+    /// <remarks>
+    /// Используется формула для нахождения расстояния от точки до прямой:
+    /// <c>distance = |(edgeVector × pointToEdge)| / |edgeVector|</c>.
+    /// </remarks>
     private float CalculateDistance(Vector2 point, EdgeComponent edge)
     {
         var edgeVector = edge.End - edge.Start;

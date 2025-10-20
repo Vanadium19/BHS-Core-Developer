@@ -1,0 +1,79 @@
+\doxysection{BHS.\+Core.\+IEcs\+Service Interface Reference}
+\hypertarget{interface_b_h_s_1_1_core_1_1_i_ecs_service}{}\label{interface_b_h_s_1_1_core_1_1_i_ecs_service}\index{BHS.Core.IEcsService@{BHS.Core.IEcsService}}
+
+
+Интерфейс для сервисов управления ECS-\/миром.  
+
+
+Inheritance diagram for BHS.\+Core.\+IEcs\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_b_h_s_1_1_core_1_1_i_ecs_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_b_h_s_1_1_core_1_1_i_ecs_service_a4cb88f3e61969b65bdfac3d8455d65d4}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Инициализирует ECS-\/мир и регистрирует системы. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_b_h_s_1_1_core_1_1_i_ecs_service_ae8f754c52ddd0ff4b4bc4a3604e5568a}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Выполняет один цикл обновления ECS-\/систем. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_b_h_s_1_1_core_1_1_i_ecs_service_a12952d6fb3397e8129668654ef82869b}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Освобождает ресурсы ECS и уничтожает мир. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Интерфейс для сервисов управления ECS-\/миром. 
+
+Определяет базовые методы жизненного цикла ECS\+: инициализацию, обновление и освобождение ресурсов. 
+
+\label{doc-func-members}
+\Hypertarget{interface_b_h_s_1_1_core_1_1_i_ecs_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_b_h_s_1_1_core_1_1_i_ecs_service_a12952d6fb3397e8129668654ef82869b}\index{BHS.Core.IEcsService@{BHS.Core.IEcsService}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BHS.Core.IEcsService@{BHS.Core.IEcsService}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{interface_b_h_s_1_1_core_1_1_i_ecs_service_a12952d6fb3397e8129668654ef82869b} 
+void BHS.\+Core.\+IEcs\+Service.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Освобождает ресурсы ECS и уничтожает мир. 
+
+
+
+Implemented in \mbox{\hyperlink{class_b_h_s_1_1_core_1_1_ecs_startup_ac82fb23dae5df59e13863a19304ece31}{BHS.\+Core.\+Ecs\+Startup}}.
+
+\Hypertarget{interface_b_h_s_1_1_core_1_1_i_ecs_service_a4cb88f3e61969b65bdfac3d8455d65d4}\index{BHS.Core.IEcsService@{BHS.Core.IEcsService}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!BHS.Core.IEcsService@{BHS.Core.IEcsService}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{interface_b_h_s_1_1_core_1_1_i_ecs_service_a4cb88f3e61969b65bdfac3d8455d65d4} 
+void BHS.\+Core.\+IEcs\+Service.\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Инициализирует ECS-\/мир и регистрирует системы. 
+
+
+
+Implemented in \mbox{\hyperlink{class_b_h_s_1_1_core_1_1_ecs_startup_aa854698fbac706e2de3c5a3a9c6a5810}{BHS.\+Core.\+Ecs\+Startup}}.
+
+\Hypertarget{interface_b_h_s_1_1_core_1_1_i_ecs_service_ae8f754c52ddd0ff4b4bc4a3604e5568a}\index{BHS.Core.IEcsService@{BHS.Core.IEcsService}!Run@{Run}}
+\index{Run@{Run}!BHS.Core.IEcsService@{BHS.Core.IEcsService}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{interface_b_h_s_1_1_core_1_1_i_ecs_service_ae8f754c52ddd0ff4b4bc4a3604e5568a} 
+void BHS.\+Core.\+IEcs\+Service.\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Выполняет один цикл обновления ECS-\/систем. 
+
+
+
+Implemented in \mbox{\hyperlink{class_b_h_s_1_1_core_1_1_ecs_startup_a187cbcc7d21a4d3d056a6d38b8fa0012}{BHS.\+Core.\+Ecs\+Startup}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Core/IEcs\+Service.\+cs\end{DoxyCompactItemize}

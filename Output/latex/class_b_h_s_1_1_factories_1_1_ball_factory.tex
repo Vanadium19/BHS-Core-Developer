@@ -1,0 +1,59 @@
+\doxysection{BHS.\+Factories.\+Ball\+Factory Class Reference}
+\hypertarget{class_b_h_s_1_1_factories_1_1_ball_factory}{}\label{class_b_h_s_1_1_factories_1_1_ball_factory}\index{BHS.Factories.BallFactory@{BHS.Factories.BallFactory}}
+
+
+Фабрика для создания сущностей шариков в ECS-\/мире и их визуальных представлений.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_h_s_1_1_factories_1_1_ball_factory_aee32aa07223b1c788fe74a8f30135851}\label{class_b_h_s_1_1_factories_1_1_ball_factory_aee32aa07223b1c788fe74a8f30135851} 
+{\bfseries Ball\+Factory} (\mbox{\hyperlink{interface_b_h_s_1_1_view_1_1_i_scene_service}{IScene\+Service}} scene, Ecs\+World world)
+\item 
+\mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}{Ball}} \mbox{\hyperlink{class_b_h_s_1_1_factories_1_1_ball_factory_ab873ae32035081d21ea05ddb02f37722}{Create}} (\mbox{\hyperlink{struct_b_h_s_1_1_data_1_1_ball_data}{Ball\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Создаёт новую сущность шарика и соответствующий объект сцены. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Фабрика для создания сущностей шариков в ECS-\/мире и их визуальных представлений. 
+
+\doxylink{class_b_h_s_1_1_factories_1_1_ball_factory}{Ball\+Factory} отвечает за инициализацию всех необходимых компонентов ECS-\/сущности, представляющей шарик, а также за создание связанного визуального объекта \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}{Ball} в сцене. 
+
+Компоненты, добавляемые при создании\+: 
+\begin{DoxyItemize}
+\item \doxylink{struct_b_h_s_1_1_components_1_1_position_component}{Position\+Component} — позиция шарика; 
+\item \doxylink{struct_b_h_s_1_1_components_1_1_speed_component}{Speed\+Component} — скорость движения; 
+\item \doxylink{struct_b_h_s_1_1_components_1_1_direction_component}{Direction\+Component} — направление движения; 
+\item \doxylink{struct_b_h_s_1_1_components_1_1_radius_component}{Radius\+Component} — радиус шарика; 
+\item \doxylink{struct_b_h_s_1_1_components_1_1_link_to_scene_object}{Link\+To\+Scene\+Object} — ссылка на визуальный объект сцены. 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_b_h_s_1_1_factories_1_1_ball_factory_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_h_s_1_1_factories_1_1_ball_factory_ab873ae32035081d21ea05ddb02f37722}\index{BHS.Factories.BallFactory@{BHS.Factories.BallFactory}!Create@{Create}}
+\index{Create@{Create}!BHS.Factories.BallFactory@{BHS.Factories.BallFactory}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \label{class_b_h_s_1_1_factories_1_1_ball_factory_ab873ae32035081d21ea05ddb02f37722} 
+\mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}{Ball}} BHS.\+Factories.\+Ball\+Factory.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_b_h_s_1_1_data_1_1_ball_data}{Ball\+Data}}}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Создаёт новую сущность шарика и соответствующий объект сцены. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные и параметры шарика, включая позицию, радиус и скорость.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Созданный объект \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}{Ball}.
+\end{DoxyReturn}
+
+
+Метод создаёт новую ECS-\/сущность, добавляет к ней все необходимые компоненты и связывает с визуальным объектом \doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_ball}{Ball}, который добавляется на сцену. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Factories/Ball\+Factory.\+cs\end{DoxyCompactItemize}

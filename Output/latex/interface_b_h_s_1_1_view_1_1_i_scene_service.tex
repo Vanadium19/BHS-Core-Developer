@@ -1,0 +1,86 @@
+\doxysection{BHS.\+View.\+IScene\+Service Interface Reference}
+\hypertarget{interface_b_h_s_1_1_view_1_1_i_scene_service}{}\label{interface_b_h_s_1_1_view_1_1_i_scene_service}\index{BHS.View.ISceneService@{BHS.View.ISceneService}}
+
+
+Интерфейс сервиса управления визуальной сценой.  
+
+
+Inheritance diagram for BHS.\+View.\+IScene\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_b_h_s_1_1_view_1_1_i_scene_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_b_h_s_1_1_view_1_1_i_scene_service_ab7cfca626fe89b4f6d30f8b99261577a}{Add}} (\mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{Scene\+Object}} scene\+Object)
+\begin{DoxyCompactList}\small\item\em Добавляет визуальный объект на сцену. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_b_h_s_1_1_view_1_1_i_scene_service_aa81f691d8ef314ba22ccbd6fbeeba83f}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Выполняет отрисовку всех объектов, добавленных на сцену. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_b_h_s_1_1_view_1_1_i_scene_service_a43d25ceafbf264d334b1fb0388767ac1}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Удаляет все объекты сцены и освобождает связанные ресурсы. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Интерфейс сервиса управления визуальной сценой. 
+
+Определяет базовые операции для добавления, отображения и удаления объектов сцены (\doxylink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{Scene\+Object}). 
+
+Реализация интерфейса обеспечивает взаимодействие ECS-\/механизма с визуальным представлением в Avalonia. 
+
+\label{doc-func-members}
+\Hypertarget{interface_b_h_s_1_1_view_1_1_i_scene_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_b_h_s_1_1_view_1_1_i_scene_service_ab7cfca626fe89b4f6d30f8b99261577a}\index{BHS.View.ISceneService@{BHS.View.ISceneService}!Add@{Add}}
+\index{Add@{Add}!BHS.View.ISceneService@{BHS.View.ISceneService}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{interface_b_h_s_1_1_view_1_1_i_scene_service_ab7cfca626fe89b4f6d30f8b99261577a} 
+void BHS.\+View.\+IScene\+Service.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_objects_1_1_scene_object}{Scene\+Object}}}]{scene\+Object}{}\end{DoxyParamCaption})}
+
+
+
+Добавляет визуальный объект на сцену. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene\+Object} & Экземпляр объекта сцены, который необходимо добавить.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_aad5e44ee5730d0295a5e97ccfd26da0c}{BHS.\+View.\+Scene}}.
+
+\Hypertarget{interface_b_h_s_1_1_view_1_1_i_scene_service_a43d25ceafbf264d334b1fb0388767ac1}\index{BHS.View.ISceneService@{BHS.View.ISceneService}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!BHS.View.ISceneService@{BHS.View.ISceneService}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{interface_b_h_s_1_1_view_1_1_i_scene_service_a43d25ceafbf264d334b1fb0388767ac1} 
+void BHS.\+View.\+IScene\+Service.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Удаляет все объекты сцены и освобождает связанные ресурсы. 
+
+
+
+Implemented in \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_a1fdcb7e6a5f4247ae301becac5618cf8}{BHS.\+View.\+Scene}}.
+
+\Hypertarget{interface_b_h_s_1_1_view_1_1_i_scene_service_aa81f691d8ef314ba22ccbd6fbeeba83f}\index{BHS.View.ISceneService@{BHS.View.ISceneService}!Render@{Render}}
+\index{Render@{Render}!BHS.View.ISceneService@{BHS.View.ISceneService}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{interface_b_h_s_1_1_view_1_1_i_scene_service_aa81f691d8ef314ba22ccbd6fbeeba83f} 
+void BHS.\+View.\+IScene\+Service.\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Выполняет отрисовку всех объектов, добавленных на сцену. 
+
+
+
+Implemented in \mbox{\hyperlink{class_b_h_s_1_1_view_1_1_scene_a59e501d23a78dd175bf5595b9ba6d1fa}{BHS.\+View.\+Scene}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View/IScene\+Service.\+cs\end{DoxyCompactItemize}

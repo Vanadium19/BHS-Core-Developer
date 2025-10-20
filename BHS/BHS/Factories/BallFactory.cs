@@ -6,6 +6,26 @@ using Leopotam.EcsLite;
 
 namespace BHS.Factories;
 
+/// <summary>
+/// Фабрика для создания сущностей шариков в ECS-мире и их визуальных представлений.
+/// </summary>
+/// <remarks>
+/// <para>
+/// <see cref="BallFactory"/> отвечает за инициализацию всех необходимых компонентов
+/// ECS-сущности, представляющей шарик, а также за создание связанного
+/// визуального объекта <see cref="Ball"/> в сцене.
+/// </para>
+/// <para>
+/// Компоненты, добавляемые при создании:
+/// <list type="bullet">
+/// <item><see cref="PositionComponent"/> — позиция шарика;</item>
+/// <item><see cref="SpeedComponent"/> — скорость движения;</item>
+/// <item><see cref="DirectionComponent"/> — направление движения;</item>
+/// <item><see cref="RadiusComponent"/> — радиус шарика;</item>
+/// <item><see cref="LinkToSceneObject"/> — ссылка на визуальный объект сцены.</item>
+/// </list>
+/// </para>
+/// </remarks>
 public class BallFactory
 {
     private readonly ISceneService _scene;
@@ -17,6 +37,15 @@ public class BallFactory
         _world = world;
     }
 
+    /// <summary>
+    /// Создаёт новую сущность шарика и соответствующий объект сцены.
+    /// </summary>
+    /// <param name="data">Данные и параметры шарика, включая позицию, радиус и скорость.</param>
+    /// <returns>Созданный объект <see cref="Ball"/>.</returns>
+    /// <remarks>
+    /// Метод создаёт новую ECS-сущность, добавляет к ней все необходимые компоненты
+    /// и связывает с визуальным объектом <see cref="Ball"/>, который добавляется на сцену.
+    /// </remarks>
     public Ball Create(BallData data)
     {
         var entity = _world.NewEntity();

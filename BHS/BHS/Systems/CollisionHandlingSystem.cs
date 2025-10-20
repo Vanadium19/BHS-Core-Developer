@@ -5,6 +5,21 @@ using Leopotam.EcsLite;
 
 namespace BHS.Systems;
 
+/// <summary>
+/// Система обработки столкновений, изменяющая направление движения сущностей после удара.
+/// </summary>
+/// <remarks>
+/// <para>
+/// <see cref="CollisionHandlingSystem"/> реагирует на события столкновения (<see cref="CollisionEvent"/>)  
+/// и обновляет направление движения сущностей с компонентом <see cref="DirectionComponent"/>.
+/// </para>
+/// <para>
+/// Новое направление вычисляется путём отражения вектора скорости от нормали поверхности по формуле:
+/// <c>v' = v - 2 * (v ⋅ n) * n</c>,
+/// где <c>v</c> — текущий вектор направления, <c>n</c> — нормаль к стене.
+/// </para>
+/// После обработки событие столкновения удаляется из мира ECS.
+/// </remarks>
 public struct CollisionHandlingSystem : IEcsInitSystem, IEcsRunSystem
 {
     private const int ReflectionFactor = 2;

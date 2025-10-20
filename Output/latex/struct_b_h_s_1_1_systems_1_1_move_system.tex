@@ -1,0 +1,34 @@
+\doxysection{BHS.\+Systems.\+Move\+System Struct Reference}
+\hypertarget{struct_b_h_s_1_1_systems_1_1_move_system}{}\label{struct_b_h_s_1_1_systems_1_1_move_system}\index{BHS.Systems.MoveSystem@{BHS.Systems.MoveSystem}}
+
+
+Система ECS, отвечающая за обновление позиции сущностей во времени.  
+
+
+Inheritance diagram for BHS.\+Systems.\+Move\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_b_h_s_1_1_systems_1_1_move_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_move_system_a4639d6d5710b1bcd1bb21bd9a4b0f0eb}\label{struct_b_h_s_1_1_systems_1_1_move_system_a4639d6d5710b1bcd1bb21bd9a4b0f0eb} 
+void {\bfseries Init} (IEcs\+Systems systems)
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_move_system_a5820e850c7a0ad810a8af442461a663f}\label{struct_b_h_s_1_1_systems_1_1_move_system_a5820e850c7a0ad810a8af442461a663f} 
+void {\bfseries Run} (IEcs\+Systems systems)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Система ECS, отвечающая за обновление позиции сущностей во времени. 
+
+\doxylink{struct_b_h_s_1_1_systems_1_1_move_system}{Move\+System} проходит по всем сущностям, у которых есть компоненты \doxylink{struct_b_h_s_1_1_components_1_1_position_component}{Position\+Component}, \doxylink{struct_b_h_s_1_1_components_1_1_speed_component}{Speed\+Component} и \doxylink{struct_b_h_s_1_1_components_1_1_direction_component}{Direction\+Component}. 
+
+На каждом кадре обновляет позицию сущности по формуле\+: {\ttfamily position += direction \texorpdfstring{$\ast$}{*} speed \texorpdfstring{$\ast$}{*} Delta\+Time}, перемещая объекты в соответствии с их направлением, скоростью и временем кадра. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Systems/Move\+System.\+cs\end{DoxyCompactItemize}

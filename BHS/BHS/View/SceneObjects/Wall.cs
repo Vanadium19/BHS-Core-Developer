@@ -5,6 +5,19 @@ using Avalonia.Media;
 
 namespace BHS.View.SceneObjects;
 
+/// <summary>
+/// Визуальное представление стены на сцене.
+/// </summary>
+/// <remarks>
+/// <para>
+/// <see cref="Wall"/> наследуется от <see cref="SceneObject"/> и отображается в виде линии
+/// (<see cref="Line"/>), определяемой точками начала и конца.
+/// </para>
+/// <para>
+/// Стена используется для взаимодействия с шариком — система столкновений
+/// (<see cref="BHS.Systems.CheckCollisionSystem"/>) вычисляет нормали и отскоки на её основе.
+/// </para>
+/// </remarks>
 public sealed class Wall : SceneObject
 {
     private const float Thickness = 4;
@@ -20,6 +33,9 @@ public sealed class Wall : SceneObject
         };
     }
 
+    /// <summary>
+    /// Фигура Avalonia, представляющая линию стены.
+    /// </summary>
     public override Shape Shape { get; }
 
     protected override void UpdateColorInternal(IImmutableSolidColorBrush value)

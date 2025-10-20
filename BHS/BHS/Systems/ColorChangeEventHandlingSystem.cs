@@ -4,6 +4,21 @@ using Leopotam.EcsLite;
 
 namespace BHS.Systems;
 
+/// <summary>
+/// Система обработки событий изменения цвета у объектов сцены.
+/// </summary>
+/// <remarks>
+/// <para>
+/// <see cref="ColorChangeEventHandlingSystem"/> реагирует на события
+/// <see cref="ColorChangeEvent"/>, обновляя визуальное состояние
+/// объектов сцены, связанных через компонент <see cref="LinkToSceneObject"/>.
+/// </para>
+/// <para>
+/// При получении события система применяет цветовую анимацию,
+/// устанавливает целевой цвет из <see cref="ColorAnimationComponent"/>
+/// и удаляет обработанное событие из ECS-мира.
+/// </para>
+/// </remarks>
 public struct ColorChangeEventHandlingSystem : IEcsInitSystem, IEcsRunSystem
 {
     private EcsFilter _filter;

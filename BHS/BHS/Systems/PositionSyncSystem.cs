@@ -3,6 +3,19 @@ using Leopotam.EcsLite;
 
 namespace BHS.Systems;
 
+/// <summary>
+/// Система синхронизации позиции ECS-сущностей с объектами сцены.
+/// </summary>
+/// <remarks>
+/// <para>
+/// <see cref="PositionSyncSystem"/> обновляет положение визуальных или игровых объектов сцены
+/// на основе текущих данных из ECS-компонентов <see cref="PositionComponent"/>.
+/// </para>
+/// <para>
+/// Связь между ECS-сущностью и объектом сцены осуществляется через компонент
+/// <see cref="LinkToSceneObject"/>, который предоставляет метод <c>SetPosition()</c>.
+/// </para>
+/// </remarks>
 public struct PositionSyncSystem : IEcsInitSystem, IEcsRunSystem
 {
     private EcsFilter _filter;

@@ -1,0 +1,34 @@
+\doxysection{BHS.\+Systems.\+Check\+Collision\+System Struct Reference}
+\hypertarget{struct_b_h_s_1_1_systems_1_1_check_collision_system}{}\label{struct_b_h_s_1_1_systems_1_1_check_collision_system}\index{BHS.Systems.CheckCollisionSystem@{BHS.Systems.CheckCollisionSystem}}
+
+
+Система проверки столкновений между шариками и стенами в ECS-\/мире.  
+
+
+Inheritance diagram for BHS.\+Systems.\+Check\+Collision\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_b_h_s_1_1_systems_1_1_check_collision_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_check_collision_system_ab89af1b3125ad17ec12c7bc10e275dfc}\label{struct_b_h_s_1_1_systems_1_1_check_collision_system_ab89af1b3125ad17ec12c7bc10e275dfc} 
+void {\bfseries Init} (IEcs\+Systems systems)
+\item 
+\Hypertarget{struct_b_h_s_1_1_systems_1_1_check_collision_system_a63b8d0348a1e6f07161fa4a0d2c4c4ba}\label{struct_b_h_s_1_1_systems_1_1_check_collision_system_a63b8d0348a1e6f07161fa4a0d2c4c4ba} 
+void {\bfseries Run} (IEcs\+Systems systems)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Система проверки столкновений между шариками и стенами в ECS-\/мире. 
+
+\doxylink{struct_b_h_s_1_1_systems_1_1_check_collision_system}{Check\+Collision\+System} определяет факт столкновения каждого шарика (сущности с компонентами \doxylink{struct_b_h_s_1_1_components_1_1_position_component}{Position\+Component} и \doxylink{struct_b_h_s_1_1_components_1_1_radius_component}{Radius\+Component}) со всеми стенами (сущностями, содержащими \doxylink{struct_b_h_s_1_1_components_1_1_edge_component}{Edge\+Component}). 
+
+При обнаружении пересечения создаётся событие \doxylink{struct_b_h_s_1_1_events_1_1_collision_event}{Collision\+Event} для шарика и \doxylink{struct_b_h_s_1_1_events_1_1_color_change_event}{Color\+Change\+Event} для стены. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Systems/Check\+Collision\+System.\+cs\end{DoxyCompactItemize}

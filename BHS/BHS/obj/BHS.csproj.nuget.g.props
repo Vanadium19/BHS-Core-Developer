@@ -18,6 +18,7 @@
     <Import Project="$(NuGetPackageRoot)avalonia/11.3.6/buildTransitive/Avalonia.props" Condition="Exists('$(NuGetPackageRoot)avalonia/11.3.6/buildTransitive/Avalonia.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgDoxygen Condition=" '$(PkgDoxygen)' == '' ">/Users/vanadium/.nuget/packages/doxygen/1.8.14</PkgDoxygen>
     <PkgAvalonia_BuildServices Condition=" '$(PkgAvalonia_BuildServices)' == '' ">/Users/vanadium/.nuget/packages/avalonia.buildservices/0.0.31</PkgAvalonia_BuildServices>
     <PkgAvalonia Condition=" '$(PkgAvalonia)' == '' ">/Users/vanadium/.nuget/packages/avalonia/11.3.6</PkgAvalonia>
   </PropertyGroup>

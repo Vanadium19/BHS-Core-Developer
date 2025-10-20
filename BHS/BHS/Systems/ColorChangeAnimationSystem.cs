@@ -4,6 +4,21 @@ using static BHS.Constants.GameConstants;
 
 namespace BHS.Systems;
 
+/// <summary>
+/// Система анимации изменения цвета объектов сцены.
+/// </summary>
+/// <remarks>
+/// <para>
+/// <see cref="ColorChangeAnimationSystem"/> управляет постепенным возвращением
+/// цвета объекта к исходному после события <see cref="BHS.Events.ColorChangeEvent"/>.
+/// </para>
+/// <para>
+/// Для каждой сущности, имеющей <see cref="LinkToSceneObject"/> и
+/// <see cref="ColorAnimationComponent"/>, система уменьшает таймер анимации
+/// (<c>CurrentTime</c>) на каждом кадре и по его завершении восстанавливает
+/// начальный цвет (<c>StartColor</c>).
+/// </para>
+/// </remarks>
 public struct ColorChangeAnimationSystem : IEcsInitSystem, IEcsRunSystem
 {
     private EcsFilter _filter;

@@ -325,6 +325,9 @@
           }
         }
       },
+      "Doxygen/1.8.14": {
+        "type": "package"
+      },
       "HarfBuzzSharp/8.3.1.1": {
         "type": "package",
         "dependencies": {
@@ -1057,6 +1060,20 @@
         "lib/netstandard2.0/Avalonia.X11.xml"
       ]
     },
+    "Doxygen/1.8.14": {
+      "sha512": "2a9Cx5QwwZC3D5tFvRQdSNdjVSIA7INtnHbxq9ogkrbkTBI5XZiS0oI5cln6aNL3M1YuVbGZL2YHIMThbVJRwQ==",
+      "type": "package",
+      "path": "doxygen/1.8.14",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "doxygen.1.8.14.nupkg.sha512",
+        "doxygen.nuspec",
+        "tools/doxygen.exe",
+        "tools/libclang.dll"
+      ]
+    },
     "HarfBuzzSharp/8.3.1.1": {
       "sha512": "tLZN66oe/uiRPTZfrCU4i8ScVGwqHNh5MHrXj0yVf4l7Mz0FhTGnQ71RGySROTmdognAs0JtluHkL41pIabWuQ==",
       "type": "package",
@@ -1525,6 +1542,7 @@
       "Avalonia.Diagnostics >= 11.3.6",
       "Avalonia.Fonts.Inter >= 11.3.6",
       "Avalonia.Themes.Fluent >= 11.3.6",
+      "Doxygen >= 1.8.14",
       "LeoEcs >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection >= 10.0.0-rc.2.25502.107"
     ]
@@ -1595,6 +1613,12 @@
           "Avalonia.Themes.Fluent": {
             "target": "Package",
             "version": "[11.3.6, )"
+          },
+          "Doxygen": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.8.14, )"
           },
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
